@@ -1,0 +1,73 @@
+I, [2018-07-05T11:31:14.521779 #8060]  INFO -- : [ddc39468-8b7a-44c6-b10e-f235bc6cd9e5] Started GET "/album_invs" for 127.0.0.1 at 2018-07-05 11:31:14 -0600
+I, [2018-07-05T11:31:14.531780 #8060]  INFO -- : [ddc39468-8b7a-44c6-b10e-f235bc6cd9e5] Processing by AlbumInvsController#index as HTML
+I, [2018-07-05T11:31:14.852812 #8060]  INFO -- : [ddc39468-8b7a-44c6-b10e-f235bc6cd9e5]   Rendering album_invs/index.html.erb within layouts/application
+I, [2018-07-05T11:31:15.016829 #8060]  INFO -- : [ddc39468-8b7a-44c6-b10e-f235bc6cd9e5]   Rendered album_invs/index.html.erb within layouts/application (163.0ms)
+I, [2018-07-05T11:31:15.017829 #8060]  INFO -- : [ddc39468-8b7a-44c6-b10e-f235bc6cd9e5] Completed 500 Internal Server Error in 486ms
+F, [2018-07-05T11:31:15.018829 #8060] FATAL -- : [ddc39468-8b7a-44c6-b10e-f235bc6cd9e5]   
+F, [2018-07-05T11:31:15.018829 #8060] FATAL -- : [ddc39468-8b7a-44c6-b10e-f235bc6cd9e5] ActionView::Template::Error (Access denied for user 'Rlee66'@'localhost' (using password: NO)):
+F, [2018-07-05T11:31:15.019829 #8060] FATAL -- : [ddc39468-8b7a-44c6-b10e-f235bc6cd9e5]     15:   </thead>
+[ddc39468-8b7a-44c6-b10e-f235bc6cd9e5]     16: 
+[ddc39468-8b7a-44c6-b10e-f235bc6cd9e5]     17:   <tbody>
+[ddc39468-8b7a-44c6-b10e-f235bc6cd9e5]     18:     <% @album_invs.each do |album_inv| %>
+[ddc39468-8b7a-44c6-b10e-f235bc6cd9e5]     19:       <tr>
+[ddc39468-8b7a-44c6-b10e-f235bc6cd9e5]     20:         <td><%= album_inv.Title %></td>
+[ddc39468-8b7a-44c6-b10e-f235bc6cd9e5]     21:         <td><%= album_inv.Genre %></td>
+F, [2018-07-05T11:31:15.019829 #8060] FATAL -- : [ddc39468-8b7a-44c6-b10e-f235bc6cd9e5]   
+F, [2018-07-05T11:31:15.019829 #8060] FATAL -- : [ddc39468-8b7a-44c6-b10e-f235bc6cd9e5] app/views/album_invs/index.html.erb:18:in `_app_views_album_invs_index_html_erb__600675910_74533520'
+I, [2018-07-05T11:31:15.102837 #8060]  INFO -- : [f7a06045-4dbb-448a-92bf-33fc524a4c56] Started GET "/favicon.ico" for 127.0.0.1 at 2018-07-05 11:31:15 -0600
+F, [2018-07-05T11:31:15.106838 #8060] FATAL -- : [f7a06045-4dbb-448a-92bf-33fc524a4c56]   
+F, [2018-07-05T11:31:15.109838 #8060] FATAL -- : [f7a06045-4dbb-448a-92bf-33fc524a4c56] ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+F, [2018-07-05T11:31:15.110838 #8060] FATAL -- : [f7a06045-4dbb-448a-92bf-33fc524a4c56]   
+F, [2018-07-05T11:31:15.111838 #8060] FATAL -- : [f7a06045-4dbb-448a-92bf-33fc524a4c56] actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] railties (5.2.0) lib/rails/engine.rb:524:in `call'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+[f7a06045-4dbb-448a-92bf-33fc524a4c56] puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+I, [2018-07-05T11:31:37.373064 #8060]  INFO -- : [d322d18e-b9f5-43ba-878e-cb469f318569] Started GET "/album_invs" for 127.0.0.1 at 2018-07-05 11:31:37 -0600
+I, [2018-07-05T11:31:37.381065 #8060]  INFO -- : [d322d18e-b9f5-43ba-878e-cb469f318569] Processing by AlbumInvsController#index as HTML
+I, [2018-07-05T11:31:37.382065 #8060]  INFO -- : [d322d18e-b9f5-43ba-878e-cb469f318569]   Rendering album_invs/index.html.erb within layouts/application
+I, [2018-07-05T11:31:37.551082 #8060]  INFO -- : [d322d18e-b9f5-43ba-878e-cb469f318569]   Rendered album_invs/index.html.erb within layouts/application (168.0ms)
+I, [2018-07-05T11:31:37.551082 #8060]  INFO -- : [d322d18e-b9f5-43ba-878e-cb469f318569] Completed 500 Internal Server Error in 170ms
+F, [2018-07-05T11:31:37.552082 #8060] FATAL -- : [d322d18e-b9f5-43ba-878e-cb469f318569]   
+F, [2018-07-05T11:31:37.552082 #8060] FATAL -- : [d322d18e-b9f5-43ba-878e-cb469f318569] ActionView::Template::Error (Access denied for user 'Rlee66'@'localhost' (using password: NO)):
+F, [2018-07-05T11:31:37.552082 #8060] FATAL -- : [d322d18e-b9f5-43ba-878e-cb469f318569]     15:   </thead>
+[d322d18e-b9f5-43ba-878e-cb469f318569]     16: 
+[d322d18e-b9f5-43ba-878e-cb469f318569]     17:   <tbody>
+[d322d18e-b9f5-43ba-878e-cb469f318569]     18:     <% @album_invs.each do |album_inv| %>
+[d322d18e-b9f5-43ba-878e-cb469f318569]     19:       <tr>
+[d322d18e-b9f5-43ba-878e-cb469f318569]     20:         <td><%= album_inv.Title %></td>
+[d322d18e-b9f5-43ba-878e-cb469f318569]     21:         <td><%= album_inv.Genre %></td>
+F, [2018-07-05T11:31:37.552082 #8060] FATAL -- : [d322d18e-b9f5-43ba-878e-cb469f318569]   
+F, [2018-07-05T11:31:37.552082 #8060] FATAL -- : [d322d18e-b9f5-43ba-878e-cb469f318569] app/views/album_invs/index.html.erb:18:in `_app_views_album_invs_index_html_erb__600675910_74533520'
+I, [2018-07-05T11:31:39.766304 #8060]  INFO -- : [0c2c8e3f-44d9-41d8-9191-4a39c9697682] Started GET "/album_invs" for 127.0.0.1 at 2018-07-05 11:31:39 -0600
+I, [2018-07-05T11:31:39.772304 #8060]  INFO -- : [0c2c8e3f-44d9-41d8-9191-4a39c9697682] Processing by AlbumInvsController#index as HTML
+I, [2018-07-05T11:31:39.773304 #8060]  INFO -- : [0c2c8e3f-44d9-41d8-9191-4a39c9697682]   Rendering album_invs/index.html.erb within layouts/application
+I, [2018-07-05T11:31:39.914318 #8060]  INFO -- : [0c2c8e3f-44d9-41d8-9191-4a39c9697682]   Rendered album_invs/index.html.erb within layouts/application (140.0ms)
+I, [2018-07-05T11:31:39.916319 #8060]  INFO -- : [0c2c8e3f-44d9-41d8-9191-4a39c9697682] Completed 500 Internal Server Error in 144ms
+F, [2018-07-05T11:31:39.919319 #8060] FATAL -- : [0c2c8e3f-44d9-41d8-9191-4a39c9697682]   
+F, [2018-07-05T11:31:39.919319 #8060] FATAL -- : [0c2c8e3f-44d9-41d8-9191-4a39c9697682] ActionView::Template::Error (Access denied for user 'Rlee66'@'localhost' (using password: NO)):
+F, [2018-07-05T11:31:39.919319 #8060] FATAL -- : [0c2c8e3f-44d9-41d8-9191-4a39c9697682]     15:   </thead>
+[0c2c8e3f-44d9-41d8-9191-4a39c9697682]     16: 
+[0c2c8e3f-44d9-41d8-9191-4a39c9697682]     17:   <tbody>
+[0c2c8e3f-44d9-41d8-9191-4a39c9697682]     18:     <% @album_invs.each do |album_inv| %>
+[0c2c8e3f-44d9-41d8-9191-4a39c9697682]     19:       <tr>
+[0c2c8e3f-44d9-41d8-9191-4a39c9697682]     20:         <td><%= album_inv.Title %></td>
+[0c2c8e3f-44d9-41d8-9191-4a39c9697682]     21:         <td><%= album_inv.Genre %></td>
+F, [2018-07-05T11:31:39.920319 #8060] FATAL -- : [0c2c8e3f-44d9-41d8-9191-4a39c9697682]   
+F, [2018-07-05T11:31:39.920319 #8060] FATAL -- : [0c2c8e3f-44d9-41d8-9191-4a39c9697682] app/views/album_invs/index.html.erb:18:in `_app_views_album_invs_index_html_erb__600675910_74533520'
