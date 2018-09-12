@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Album Pubs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @album_pubs.each do |album_pub| %>
+      <tr>
+        <td><%= album_pub.name %></td>
+        <td><%= link_to 'Show', album_pub %></td>
+        <td><%= link_to 'Edit', edit_album_pub_path(album_pub) %></td>
+        <td><%= link_to 'Destroy', album_pub, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Album Pub', new_album_pub_path %>

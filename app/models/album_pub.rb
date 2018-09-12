@@ -1,0 +1,2 @@
+class AlbumPub < ApplicationRecord
+end

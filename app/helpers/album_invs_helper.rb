@@ -1,0 +1,2 @@
+module AlbumInvsHelper
+end

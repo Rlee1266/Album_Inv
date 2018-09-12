@@ -1,0 +1,33 @@
+<p>
+  <strong>Title:</strong>
+  <%= @album_inv.Title %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @album_inv.Genre %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @album_inv.Year %>
+</p>
+
+<p>
+  <strong>Dadded:</strong>
+  <%= @album_inv.dAdded %>
+</p>
+
+<p>
+  <strong>Plays:</strong>
+  <%= @album_inv.Plays %>
+</p>
+
+<p>
+  <strong>Publisher:</strong>
+  <%= @album_inv.Publisher %>
+</p>
+
+
+<%= link_to 'Edit', edit_album_inv_path(@album_inv) %> |
+<%= link_to 'Back', album_invs_path %>

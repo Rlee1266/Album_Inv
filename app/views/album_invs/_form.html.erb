@@ -1,0 +1,55 @@
+<%= form_with(model: album_inv, local: true) do |form| %>
+  <% if album_inv.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(album_inv.errors.count, "error") %> prohibited this album_inv from being saved:</h2>
+
+      <ul>
+      <% album_inv.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Title %>
+    <%= form.text_field :Title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Genre %>
+    <%= form.text_field :Genre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.date_select :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dAdded %>
+    <%= form.date_select :dAdded %>
+  </div>
+
+  <div class="field">
+  <%= form.label :Plays %>
+  <%= form.number_field :Plays %>
+</div>
+
+  <div class="field">
+    <%= form.label :Artist %>
+    <% options = options_from_collection_for_select(@artists, 'id', 'name') %>
+    <%= form.select :Artist,  options  %>
+    <%= link_to 'New Artist', new_artist_path %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Publisher %>
+    <% options = options_from_collection_for_select(@pubs, 'id', 'name') %>
+    <%= form.select :Publisher,  options %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

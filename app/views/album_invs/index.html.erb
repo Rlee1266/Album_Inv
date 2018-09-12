@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Album Invs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Genre</th>
+      <th>Year</th>
+      <th>Dadded</th>
+      <th>Plays</th>
+      <th>Publisher</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @album_invs.each do |album_inv| %>
+      <tr>
+        <td><%= album_inv.Title %></td>
+        <td><%= album_inv.Genre %></td>
+        <td><%= album_inv.Year %></td>
+        <td><%= album_inv.dAdded %></td>
+        <td><%= album_inv.Plays %></td>
+
+
+
+
+        <td><%= link_to 'Show', album_inv %></td>
+        <td><%= link_to 'Edit', edit_album_inv_path(album_inv) %></td>
+        <td><%= link_to 'Destroy', album_inv, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+
+
+
+    <% end %>
+  </tbody>
+</table>
+
+<%= form_tag(album_invs_path) do %>
+  <%= text_field_tag :term %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
+<br>
+
+<%= link_to 'New Album Inv', new_album_inv_path %>
